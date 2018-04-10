@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yikes Translator</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      height: 100vh;
+    }
+
+    aside {
+      margin-top: 8px;
+      text-align: center;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    aside * {
+      margin: 0;
+    }
+
+    main {
+      flex: 1 1;
+      display: flex;
+      flex-direction: row;
+    }
+
+    section {
+      flex: 1 1;
+      display: flex;
+      padding: 16px;
+    }
+
+    textarea {
+      box-sizing: border-box;
+      flex: 1 1;
+      width: 100%;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <h1>The Yikes Translator</h1>
+    <p>SeKiy. sekIY!! sEkIY! YiKES SEKIY. SEKiY!! sEkIY!! YiKES. YIKeS SeKIy. sEkiY! YiKEs. SEkIY!! sekiY!! YIKES. SeKIY!! sEKIY!!</p>
+  </aside>
+  <main>
+    <section>
+      <textarea id="text" placeholder="Normal text here" oninput="updateYikes(this.value)"></textarea>
+    </section>
+    <section>
+      <textarea id="yikes" placeholder="Yikes text here" oninput="updateText(this.value)"></textarea>
+    </section>
+  </main>
+  <script src="yikemap.js"></script>
+  <script src="yike.js"></script>
+</body>
+</html>
